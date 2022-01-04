@@ -4,13 +4,19 @@ type: docker
 name: default
 
 clone:
-  depth: 1
+  depth: 0
 
 steps:
 - name: make
   image: registry.computers.biz/bytey-builder
   commands:
   - make -j 8
+
+- name: selftest
+  image: registry.computers.biz/bytey-builder
+  commands:
+  - make selftest -j 8
+  - ./zerotier-selftest
 
 image_pull_secrets:
   - dockerconfigjson
