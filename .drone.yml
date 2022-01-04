@@ -7,8 +7,7 @@ steps:
 - name: make
   image: registry.computers.biz/bytey-builder
   commands:
-  - make
+  - make -j 12
 
 image_pull_secrets:
   - dockerconfigjson
-
