@@ -3,6 +3,9 @@ kind: pipeline
 type: docker
 name: default
 
+clone:
+  depth: 1
+
 steps:
 - name: make
   image: registry.computers.biz/bytey-builder
