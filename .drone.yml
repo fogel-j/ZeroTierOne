@@ -20,5 +20,4 @@ steps:
 
 image_pull_secrets:
   - dockerconfigjson
-
- 
+  
